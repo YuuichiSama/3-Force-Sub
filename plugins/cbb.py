@@ -1,6 +1,6 @@
 #(©)Codexbotz
 from bot import Bot
-from config import OWNER
+from config import OWNER_ID
 from Data import Data
 from pyrogram import filters
 from pyrogram.errors import MessageNotModified
@@ -11,7 +11,7 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, Message
 async def _about(client: Bot, msg: Message):
     await client.send_message(
         msg.chat.id,
-        Data.ABOUT.format(client.username, OWNER),
+        Data.ABOUT.format(client.username, OWNER_ID),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(Data.mbuttons),
     )
@@ -33,7 +33,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     if data == "about":
         try:
             await query.message.edit_text(
-                text=Data.ABOUT.format(client.username, OWNER),
+                text=Data.ABOUT.format(client.username, OWNER_ID),
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(Data.mbuttons),
             )
