@@ -39,7 +39,7 @@ FORCESUB_CHANNEL3 = int(os.environ.get("FORCESUB_CHANNEL3", ""))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "<b>ʜᴇʟʟᴏ {first}\n\n Bu bot orqali kanaldagi animelarni yuklab olishingiz mumkin
+START_MSG = os.environ.get("START_MESSAGE", "<b>Bu bot orqali kanaldagi animelarni yuklab olishingiz mumkin
 
 ❗Botga habar yozmang❗</b>")
 try:
